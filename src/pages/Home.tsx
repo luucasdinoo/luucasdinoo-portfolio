@@ -1,6 +1,7 @@
 import { MotionConfig } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import avatar from '../assets/avatar.webp'
+import { AboutSection } from '../components/about/AboutSection'
 import { AvatarOrb } from '../components/home/AvatarOrb'
 import { HeroIntro } from '../components/home/HeroIntro'
 import { MockupFluid } from '../components/home/MockupFluid'
@@ -35,9 +36,13 @@ export function Home() {
           </div>
         </section>
 
-        {quickNavSections.map(({ id }) => (
-          <section key={id} id={id} />
-        ))}
+        <AboutSection />
+
+        {quickNavSections
+          .filter(({ id }) => id !== 'sobre')
+          .map(({ id }) => (
+            <section key={id} id={id} />
+          ))}
       </main>
     </MotionConfig>
   )

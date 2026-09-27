@@ -31,5 +31,44 @@
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "email": "Email"
+  },
+  "about": {
+    "eyebrow": "01 — About",
+    "title": "About me",
+    "role": "Back-end developer",
+    "bio": "I'm a back-end developer who builds APIs and services that have to hold up in production. I favour simple code, automated tests and clear documentation. [Add your stack and experience.]",
+    "location": {
+      "eyebrow": "Flexible with time zones",
+      "title": "Based in {{city}}, <muted>available remotely</muted>"
+    },
+    "education": {
+      "eyebrow": "Education",
+      "institution": "[Institution]",
+      "course": "[Degree]",
+      "period": "[Start] – [End]",
+      "status": "[In progress]"
+    },
+    "cta": {
+      "status": "Available for projects",
+      "line1": "Have a project in mind?",
+      "line2": "Let's build it",
+      "line3": "together.",
+      "button": "Download résumé"
+    },
+    "quote": {
+      "text": "Make it work, make it right, make it fast.",
+      "author": "Kent Beck"
+    },
+    "stats": {
+      "label": "Numbers",
+      "projects": "Projects",
+      "years": "Years of experience",
+      "apis": "APIs in production",
+      "skills": "Technologies"
+    },
+    "clock": {
+      "label": "Clock showing {{time}} in {{city}}",
+      "moon": "Moon"
+    }
   }
 }

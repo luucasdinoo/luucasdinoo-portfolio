@@ -85,6 +85,27 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.about-stat-glow {
+  background: radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--accent) 16%, transparent) 0%, transparent 60%);
+}
+
+@keyframes about-status-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--accent) 0%, transparent);
+  }
+}
+
+.about-status-dot {
+  animation: about-status-pulse 1.8s ease-out infinite;
+}
+
 @keyframes typed-caret-blink {
   50% {
     opacity: 0;
