@@ -1,0 +1,159 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/space-grotesk';
+@import '@fontsource-variable/jetbrains-mono';
+@import './styles/tokens.css';
+
+@theme {
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-deep: var(--surface-deep);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-subtle: var(--ink-subtle);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-on-primary: var(--on-primary);
+  --color-on-deep: var(--on-deep);
+  --color-link: var(--link);
+  --color-focus: var(--focus);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+
+  /* @fontsource-variable registers "<Family> Variable"; the design tokens name the plain family. */
+  --font-display: 'Space Grotesk Variable', var(--raw-font-display);
+  --font-sans: 'Inter Variable', var(--raw-font-sans);
+  --font-mono: 'JetBrains Mono Variable', var(--raw-font-mono);
+
+  --shadow-sm: var(--raw-shadow-sm);
+  --shadow-md: var(--raw-shadow-md);
+  --shadow-glow: var(--raw-shadow-glow);
+
+  --radius-sm: var(--raw-radius-sm);
+  --radius-md: var(--raw-radius-md);
+  --radius-lg: var(--raw-radius-lg);
+  --radius-pill: var(--raw-radius-pill);
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+
+  --container-max: 1200px;
+
+  /* Mockup sizes (1920×1080 slide), in "mockup px" scaled by --u. */
+  --text-m-24: calc(var(--u) * 24);
+  --text-m-26: calc(var(--u) * 26);
+  --text-m-28: calc(var(--u) * 28);
+  --text-m-30: calc(var(--u) * 30);
+  --text-m-104: calc(var(--u) * 104);
+  --radius-m-4: calc(var(--u) * 4);
+  --radius-m-8: calc(var(--u) * 8);
+  --radius-m-16: calc(var(--u) * 16);
+}
+
+:root {
+  color-scheme: light dark;
+  /* One pixel of the 1920×1080 mockup, fitted to the viewport. */
+  --u: min(calc(100vw / 1920), calc(100dvh / 1080));
+}
+
+.mockup-fluid {
+  filter: blur(28px) saturate(1.15);
+}
+
+/* Light theme: flip lightness but keep the blue hue, so splats read as soft ink on white. */
+:root[data-theme='light'] .mockup-fluid {
+  filter: blur(28px) saturate(1.15) invert(1) hue-rotate(180deg);
+  opacity: 0.6;
+}
+
+/* Header rests faded; hover or keyboard focus brings it back. Touch screens keep it solid. */
+@media (hover: hover) {
+  .navbar-fade {
+    opacity: 0.35;
+    transition: opacity 0.2s ease-out;
+  }
+
+  .navbar-fade:hover,
+  .navbar-fade:focus-within {
+    opacity: 1;
+  }
+}
+
+@keyframes typed-caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.typed-caret-blink {
+  animation: typed-caret-blink 1s step-end infinite;
+}
+
+.quicknav-card {
+  transition:
+    border-color 0.18s ease-out,
+    box-shadow 0.18s ease-out,
+    transform 0.18s ease-out;
+}
+
+.quicknav-card:hover,
+.quicknav-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 max(20px, calc(var(--u) * 32)) color-mix(in srgb, var(--accent) 45%, transparent);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quicknav-card:hover,
+  .quicknav-card:focus-visible {
+    transform: none;
+  }
+}
+
+/* Inside the desktop hero, spacing utilities read in mockup px (top-150 = 150u). */
+@media (min-width: 1024px) {
+  .mockup {
+    --spacing: var(--u);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

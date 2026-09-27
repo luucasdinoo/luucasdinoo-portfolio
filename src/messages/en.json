@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "title": "Lucas Bernadino — Portfolio",
+    "description": "Portfolio of Lucas Bernadino, back-end developer."
+  },
+  "nav": {
+    "downloadCv": "Download résumé"
+  },
+  "theme": {
+    "switchToLight": "Switch to light theme",
+    "switchToDark": "Switch to dark theme"
+  },
+  "locale": {
+    "switchLabel": "Switch language"
+  },
+  "hero": {
+    "eyebrow": "Hi, I'm Lucas Bernadino",
+    "title": "<accent>Back-end</accent> developer",
+    "lead": "I build scalable, secure and well-documented APIs and systems.",
+    "avatarAlt": "Photo of Lucas Bernadino"
+  },
+  "quicknav": {
+    "label": "Quick navigation",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "social": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  }
+}
