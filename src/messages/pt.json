@@ -17,7 +17,8 @@
     "eyebrow": "Olá, eu sou Lucas Bernadino",
     "title": "Desenvolvedor <accent>back-end</accent>",
     "lead": "Construo APIs e sistemas escaláveis, seguros e bem documentados.",
-    "avatarAlt": "Foto de Lucas Bernadino"
+    "avatarAlt": "Foto de Lucas Bernadino",
+    "scrollHint": "Rolar até a seção Sobre"
   },
   "quicknav": {
     "label": "Navegação rápida",
@@ -36,17 +37,21 @@
     "eyebrow": "01 — Sobre",
     "title": "Sobre mim",
     "role": "Desenvolvedor back-end",
-    "bio": "Sou desenvolvedor back-end e construo APIs e serviços que precisam funcionar bem em produção. Prefiro código simples, testes automatizados e documentação clara. [Complete com sua stack e sua experiência.]",
+    "bio": "Sou desenvolvedor back-end com foco em Java e Spring Boot. Na Capgemini, construo e sustento APIs REST para o setor de seguros, integro sistemas legados de mainframe (IBM ACE, CICS) e modernizo aplicações de Java 7/8 para Java 21. Atuo do refinamento de requisitos à produção, com testes automatizados e microsserviços.",
     "location": {
       "eyebrow": "Fuso horário flexível",
       "title": "Baseado em {{city}}, <muted>disponível remotamente</muted>"
     },
     "education": {
       "eyebrow": "Formação",
-      "institution": "[Instituição]",
-      "course": "[Curso]",
-      "period": "[Início] – [Fim]",
-      "status": "[Cursando]"
+      "degrees": {
+        "computerScience": "Bacharelado em Ciência da Computação",
+        "internetSystems": "Tecnólogo em Sistemas para Internet"
+      },
+      "status": {
+        "inProgress": "Cursando",
+        "completed": "Concluído"
+      }
     },
     "cta": {
       "status": "Disponível para projetos",

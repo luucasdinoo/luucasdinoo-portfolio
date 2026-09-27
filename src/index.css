@@ -106,6 +106,22 @@ html {
   animation: about-status-pulse 1.8s ease-out infinite;
 }
 
+@keyframes scroll-cue-pulse {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+}
+
+.scroll-cue {
+  animation: scroll-cue-pulse 1.6s ease-in-out infinite;
+}
+
 @keyframes typed-caret-blink {
   50% {
     opacity: 0;

@@ -1,16 +1,22 @@
 import { CalendarDays, Download, FolderGit2, GraduationCap, Quote, Server, Zap } from 'lucide-react'
-import { motion } from 'motion/react'
-import type { ReactNode } from 'react'
+import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
+import { useRef, type ReactNode } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { useParams } from 'react-router'
 import { cvHref } from '../../config/site'
 import { about } from '../../content/about'
 import { isLocale } from '../../i18n'
 import { Button } from '../ui/Button'
-import { DottedGlobe } from './DottedGlobe'
+import { WorldGlobe } from './WorldGlobe'
 import { WatchClock } from './WatchClock'
 
 const statIcons = { FolderGit2, CalendarDays, Server, Zap }
+
+// In progress reads as a tinted tag; completed as a quiet outline (design system: tags use accent-soft + accent-ink).
+const statusStyles = {
+  inProgress: 'border-transparent bg-accent-soft text-accent-ink',
+  completed: 'border-line-strong text-ink-muted',
+}
 
 type CardProps = {
   index: number
@@ -23,11 +29,11 @@ type CardProps = {
 function Card({ index, tone = 'default', className = '', children }: CardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.2, delay: index * 0.05, ease: 'easeOut' }}
-      className={`relative rounded-lg border bg-surface-raised p-6 ${tone === 'accent' ? 'border-accent/45' : 'border-line'} ${className}`}
+      transition={{ duration: 0.45, delay: index * 0.08, ease: 'easeOut' }}
+      className={`relative rounded-lg border bg-surface-raised/85 p-6 ${tone === 'accent' ? 'border-accent/45' : 'border-line'} ${className}`}
     >
       {children}
     </motion.div>
@@ -42,16 +48,27 @@ export function AboutSection() {
   const { t } = useTranslation()
   const { locale } = useParams()
   const currentLocale = isLocale(locale) ? locale : 'pt'
+  const reducedMotion = useReducedMotion()
+  const headerRef = useRef<HTMLElement>(null)
+
+  // Header rises in with the scroll as the hero hands over (0 = just entering, 1 = settled).
+  const { scrollYProgress } = useScroll({ target: headerRef, offset: ['start end', 'start 55%'] })
+  const headerOpacity = useTransform(scrollYProgress, [0, 1], [0, 1])
+  const headerY = useTransform(scrollYProgress, [0, 1], [48, 0])
 
   return (
     <section id="sobre" aria-labelledby="about-title" className="scroll-mt-28 px-4 py-16 sm:px-8 lg:py-24">
       <div className="mx-auto max-w-[1200px]">
-        <header className="mb-8 flex flex-col gap-3 lg:mb-12">
+        <motion.header
+          ref={headerRef}
+          style={reducedMotion ? undefined : { opacity: headerOpacity, y: headerY }}
+          className="mb-8 flex flex-col gap-3 lg:mb-12"
+        >
           <Eyebrow>{t('about.eyebrow')}</Eyebrow>
           <h2 id="about-title" className="font-display text-[32px] leading-[1.1] font-bold tracking-[-0.02em] text-ink lg:text-[40px]">
             {t('about.title')}
           </h2>
-        </header>
+        </motion.header>
 
         <div className="relative grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-6 lg:gap-4">
           {/* Profile */}
@@ -80,7 +97,7 @@ export function AboutSection() {
                 />
               </p>
             </div>
-            <DottedGlobe
+            <WorldGlobe
               lat={about.location.lat}
               lon={about.location.lon}
               className="pointer-events-none absolute top-[30%] left-1/2 aspect-square w-full -translate-x-1/2"
@@ -95,16 +112,20 @@ export function AboutSection() {
               </span>
               <Eyebrow>{t('about.education.eyebrow')}</Eyebrow>
             </div>
-            <div className="mt-8 rounded-md border border-line bg-surface p-4 lg:mt-auto">
-              <div className="flex items-start justify-between gap-3">
-                <p className="font-display text-[20px] leading-7 font-semibold text-ink">{t('about.education.institution')}</p>
-                <span className="shrink-0 rounded-sm bg-accent-soft px-2 py-1 font-mono text-[12px] leading-4 font-medium text-accent-ink">
-                  {t('about.education.status')}
-                </span>
-              </div>
-              <p className="mt-1 text-[14px] leading-5 text-ink-muted">{t('about.education.course')}</p>
-              <p className="mt-3 text-[12px] leading-4 text-ink-subtle">{t('about.education.period')}</p>
-            </div>
+            <ul className="mt-6 flex flex-col gap-3 lg:mt-auto lg:pt-6">
+              {about.education.map(({ institution, degree, status, period }) => (
+                <li key={institution} className="rounded-md border border-line bg-surface p-4">
+                  <p className="font-display text-[17px] leading-6 font-semibold text-ink">{institution}</p>
+                  <p className="mt-1 text-[14px] leading-5 text-ink-muted">{t(`about.education.degrees.${degree}`)}</p>
+                  <div className="mt-3 flex items-center justify-between gap-3">
+                    <p className="text-[12px] leading-4 text-ink-subtle">{period}</p>
+                    <span className={`shrink-0 rounded-sm border px-2 py-0.5 font-mono text-[12px] leading-4 font-medium ${statusStyles[status]}`}>
+                      {t(`about.education.status.${status}`)}
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </Card>
 
           {/* Watch: its own block when stacked; overlaid on the row-2 seam on desktop. */}

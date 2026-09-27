@@ -6,8 +6,14 @@ export const social = {
   email: 'mailto:luucasdinoo@gmail.com',
 }
 
+const cvFiles: Record<Locale, string> = {
+  pt: '/cv/lucas-bernadino-pt.pdf',
+  // No English résumé yet: serve the Portuguese one instead of a broken link.
+  en: '/cv/lucas-bernadino-pt.pdf',
+}
+
 export function cvHref(locale: Locale): string {
-  return `/cv/lucas-bernadino-${locale}.pdf`
+  return cvFiles[locale]
 }
 
 export const quickNavSections = [

@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Navigate, Outlet, useParams } from 'react-router'
+import { AppBackground } from '../components/background/AppBackground'
 import { Navbar } from '../components/layout/Navbar'
 import { defaultLocale, isLocale } from '../i18n'
 
@@ -23,8 +24,11 @@ export function LocaleLayout() {
 
   return (
     <>
+      <AppBackground />
       <Navbar />
-      <Outlet />
+      <div className="relative z-10">
+        <Outlet />
+      </div>
     </>
   )
 }

@@ -17,7 +17,8 @@
     "eyebrow": "Hi, I'm Lucas Bernadino",
     "title": "<accent>Back-end</accent> developer",
     "lead": "I build scalable, secure and well-documented APIs and systems.",
-    "avatarAlt": "Photo of Lucas Bernadino"
+    "avatarAlt": "Photo of Lucas Bernadino",
+    "scrollHint": "Scroll to the About section"
   },
   "quicknav": {
     "label": "Quick navigation",
@@ -36,17 +37,21 @@
     "eyebrow": "01 — About",
     "title": "About me",
     "role": "Back-end developer",
-    "bio": "I'm a back-end developer who builds APIs and services that have to hold up in production. I favour simple code, automated tests and clear documentation. [Add your stack and experience.]",
+    "bio": "I'm a back-end developer focused on Java and Spring Boot. At Capgemini, I build and maintain REST APIs for the insurance sector, integrate legacy mainframe systems (IBM ACE, CICS) and modernize applications from Java 7/8 to Java 21. I work from requirements refinement to production, with automated tests and microservices.",
     "location": {
       "eyebrow": "Flexible with time zones",
       "title": "Based in {{city}}, <muted>available remotely</muted>"
     },
     "education": {
       "eyebrow": "Education",
-      "institution": "[Institution]",
-      "course": "[Degree]",
-      "period": "[Start] – [End]",
-      "status": "[In progress]"
+      "degrees": {
+        "computerScience": "Bachelor's in Computer Science",
+        "internetSystems": "Technologist degree in Internet Systems"
+      },
+      "status": {
+        "inProgress": "In progress",
+        "completed": "Completed"
+      }
     },
     "cta": {
       "status": "Available for projects",
