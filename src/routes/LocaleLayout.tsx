@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next'
 import { Navigate, Outlet, useParams } from 'react-router'
 import { AppBackground } from '../components/background/AppBackground'
 import { Navbar } from '../components/layout/Navbar'
-import { defaultLocale, isLocale } from '../i18n'
+import { defaultLocale, isLocale, type Locale } from '../i18n'
+
+const htmlLang: Record<Locale, string> = { pt: 'pt-BR', en: 'en', es: 'es', de: 'de' }
 
 export function LocaleLayout() {
   const { locale } = useParams()
@@ -14,7 +16,7 @@ export function LocaleLayout() {
   useEffect(() => {
     if (!valid) return
     if (i18n.language !== locale) void i18n.changeLanguage(locale)
-    document.documentElement.lang = locale === 'pt' ? 'pt-BR' : 'en'
+    document.documentElement.lang = htmlLang[locale]
     document.title = t('meta.title')
     const description = document.querySelector('meta[name="description"]')
     if (description) description.setAttribute('content', t('meta.description'))

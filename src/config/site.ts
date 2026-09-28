@@ -8,8 +8,10 @@ export const social = {
 
 const cvFiles: Record<Locale, string> = {
   pt: '/cv/lucas-bernadino-pt.pdf',
-  // No English résumé yet: serve the Portuguese one instead of a broken link.
+  // No résumé translated yet for these: serve the Portuguese one instead of a broken link.
   en: '/cv/lucas-bernadino-pt.pdf',
+  es: '/cv/lucas-bernadino-pt.pdf',
+  de: '/cv/lucas-bernadino-pt.pdf',
 }
 
 export function cvHref(locale: Locale): string {

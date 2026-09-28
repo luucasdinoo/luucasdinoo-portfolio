@@ -75,5 +75,56 @@
       "label": "Clock showing {{time}} in {{city}}",
       "moon": "Moon"
     }
+  },
+  "experience": {
+    "eyebrow": "02 — Experience",
+    "title": "Experience",
+    "present": "Present",
+    "duration": {
+      "year_one": "{{count}} yr",
+      "year_other": "{{count}} yrs",
+      "month_one": "{{count}} mo",
+      "month_other": "{{count}} mos"
+    },
+    "jobs": {
+      "capgemini": {
+        "role": "Solutions Consultant II",
+        "location": "Hybrid, Recife – PE",
+        "description": "Backend consultant for Bradesco Seguros, Brazil's leading insurance provider, modernizing legacy mainframe systems and sustaining REST APIs in production.",
+        "bullets": [
+          "Worked with client Bradesco Seguros using Java, Spring Boot and IBM ACE, including integrations with CICS and legacy mainframe systems.",
+          "Followed projects end-to-end, from requirements refinement to production delivery, tracking scope, deadlines and risks.",
+          "Built new features and maintained REST APIs, proposing technical solutions aligned with the client's business goals.",
+          "Modernized legacy systems, migrating applications from Java 7/8 (WebSphere) to Java 21 with Spring Boot.",
+          "Implemented mainframe integrations via IBM ACE, CICS program calls and SOAP services, ensuring interoperability between legacy and modern systems.",
+          "Investigated and resolved incidents and bugs across DSV, HML and PRD environments, improving service stability and resilience.",
+          "Wrote automated tests with JUnit and Mockito, plus endpoint validation with Postman, increasing coverage and delivery reliability.",
+          "Documented APIs with SpringDoc/OpenAPI and maintained Confluence pages for knowledge standardization and sharing."
+        ]
+      },
+      "avanade": {
+        "role": "Junior Backend Developer",
+        "location": "Hybrid, Recife – PE",
+        "description": "Junior developer maintaining and evolving backend and frontend applications for enterprise clients.",
+        "bullets": [
+          "Maintained and supported backend code, ensuring application stability and evolution.",
+          "Maintained and supported frontend code, contributing to bug fixes and feature improvements.",
+          "Fixed bugs across backend and frontend applications, ensuring quality and reliability.",
+          "Implemented new features on both backend and frontend, following defined requirements.",
+          "Used Java and Spring Boot on the backend, and TypeScript with Angular on the frontend."
+        ]
+      },
+      "compassuol": {
+        "role": "Scholarship Intern",
+        "location": "Remote",
+        "description": "Backend-focused internship applying Java, Spring Boot and cloud fundamentals in a collaborative, distributed team.",
+        "bullets": [
+          "Studied and applied Java and Spring Boot in backend application development.",
+          "Got a hands-on introduction to microservices architecture, service communication and best practices.",
+          "Worked with AWS services, learning cloud computing concepts and distributed environments.",
+          "Collaborated in a team environment, strengthening communication and organization skills."
+        ]
+      }
+    }
   }
 }

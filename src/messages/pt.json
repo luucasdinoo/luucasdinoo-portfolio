@@ -75,5 +75,56 @@
       "label": "Relógio marcando {{time}} em {{city}}",
       "moon": "Lua"
     }
+  },
+  "experience": {
+    "eyebrow": "02 — Experiência",
+    "title": "Experiência",
+    "present": "Atual",
+    "duration": {
+      "year_one": "{{count}} ano",
+      "year_other": "{{count}} anos",
+      "month_one": "{{count}} mês",
+      "month_other": "{{count}} meses"
+    },
+    "jobs": {
+      "capgemini": {
+        "role": "Consultor de Soluções II",
+        "location": "Híbrido, Recife – PE",
+        "description": "Consultor backend no cliente Bradesco Seguros, operadora líder do segmento no Brasil, modernizando sistemas legados de mainframe e sustentando APIs REST em produção.",
+        "bullets": [
+          "Atuação no cliente Bradesco Seguros com stack Java, Spring Boot e IBM ACE, incluindo integrações com CICS e sistemas legados mainframe.",
+          "Acompanhamento do ciclo de vida dos projetos, do refinamento de requisitos até a entrega em produção, com monitoramento de escopo, prazos e riscos.",
+          "Desenvolvimento de novas funcionalidades e sustentação de APIs REST, propondo soluções técnicas alinhadas aos objetivos de negócio do cliente.",
+          "Modernização de sistemas legados, migrando aplicações de Java 7/8 (WebSphere) para Java 21 com Spring Boot.",
+          "Implementação de integrações com ambiente mainframe via IBM ACE, chamadas a programas CICS e serviços SOAP, assegurando interoperabilidade entre sistemas legados e modernos.",
+          "Investigação e resolução de incidentes e bugs em ambientes de DSV, HML e PRD, contribuindo para a estabilidade e resiliência dos serviços.",
+          "Desenvolvimento de testes automatizados com JUnit e Mockito, além de validações de endpoints com Postman, aumentando a cobertura e confiabilidade das entregas.",
+          "Documentação técnica de APIs com SpringDoc/OpenAPI e uso de Confluence para padronização e disseminação de conhecimento."
+        ]
+      },
+      "avanade": {
+        "role": "Desenvolvedor Backend Júnior",
+        "location": "Híbrido, Recife – PE",
+        "description": "Desenvolvedor júnior na manutenção e evolução de aplicações backend e frontend para clientes corporativos.",
+        "bullets": [
+          "Atuação na manutenção e sustentação de código backend, garantindo estabilidade e evolução das aplicações.",
+          "Manutenção e suporte em código frontend, contribuindo para a correção e melhoria de funcionalidades.",
+          "Correção de bugs em aplicações backend e frontend, assegurando qualidade e bom funcionamento do sistema.",
+          "Implementação de novas funcionalidades tanto no backend quanto no frontend, seguindo requisitos definidos.",
+          "Utilização de Java e Spring Boot no backend e TypeScript com Angular no desenvolvimento frontend."
+        ]
+      },
+      "compassuol": {
+        "role": "Estagiário Bolsista",
+        "location": "Remoto",
+        "description": "Estágio com foco em backend, aplicando Java, Spring Boot e fundamentos de nuvem em um time colaborativo e distribuído.",
+        "bullets": [
+          "Estudo e aplicação prática de Java e Spring Boot no desenvolvimento de aplicações backend.",
+          "Introdução e prática em arquitetura de microsserviços, entendendo comunicação entre serviços e boas práticas.",
+          "Contato com serviços AWS, compreendendo conceitos de computação em nuvem e ambientes distribuídos.",
+          "Atuação em ambiente colaborativo, fortalecendo comunicação, trabalho em equipe e organização."
+        ]
+      }
+    }
   }
 }

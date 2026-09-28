@@ -7,6 +7,8 @@ import { Flag } from './Flag'
 const autonyms: Record<Locale, { name: string; lang: string }> = {
   pt: { name: 'Português (Brasil)', lang: 'pt-BR' },
   en: { name: 'English (US)', lang: 'en-US' },
+  es: { name: 'Español', lang: 'es-ES' },
+  de: { name: 'Deutsch', lang: 'de-DE' },
 }
 
 export function LocaleSwitch() {

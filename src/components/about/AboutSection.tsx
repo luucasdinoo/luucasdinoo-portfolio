@@ -1,12 +1,14 @@
 import { CalendarDays, Download, FolderGit2, GraduationCap, Quote, Server, Zap } from 'lucide-react'
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
-import { useRef, type ReactNode } from 'react'
+import { useRef } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { useParams } from 'react-router'
 import { cvHref } from '../../config/site'
 import { about } from '../../content/about'
 import { isLocale } from '../../i18n'
 import { Button } from '../ui/Button'
+import { Card } from '../ui/Card'
+import { Eyebrow } from '../ui/Eyebrow'
 import { WorldGlobe } from './WorldGlobe'
 import { WatchClock } from './WatchClock'
 
@@ -16,32 +18,6 @@ const statIcons = { FolderGit2, CalendarDays, Server, Zap }
 const statusStyles = {
   inProgress: 'border-transparent bg-accent-soft text-accent-ink',
   completed: 'border-line-strong text-ink-muted',
-}
-
-type CardProps = {
-  index: number
-  tone?: 'default' | 'accent'
-  className?: string
-  children: ReactNode
-}
-
-// Border colour comes only from `tone`, so callers never pass a competing border class.
-function Card({ index, tone = 'default', className = '', children }: CardProps) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.45, delay: index * 0.08, ease: 'easeOut' }}
-      className={`relative rounded-lg border bg-surface-raised/85 p-6 ${tone === 'accent' ? 'border-accent/45' : 'border-line'} ${className}`}
-    >
-      {children}
-    </motion.div>
-  )
-}
-
-function Eyebrow({ children }: { children: ReactNode }) {
-  return <p className="font-mono text-[12px] leading-4 font-semibold tracking-[0.12em] text-accent-ink uppercase">{children}</p>
 }
 
 export function AboutSection() {
@@ -138,7 +114,7 @@ export function AboutSection() {
           {/* Call to action */}
           <Card index={3} tone="accent" className="md:col-span-2 lg:col-span-3 lg:col-start-1 lg:row-start-2 lg:pr-44">
             <p className="flex items-center gap-2 font-mono text-[12px] leading-4 font-semibold tracking-[0.12em] text-accent-ink uppercase">
-              <span className="about-status-dot h-2 w-2 rounded-full bg-accent" aria-hidden />
+              <span className="status-pulse-dot h-2 w-2 rounded-full bg-accent" aria-hidden />
               {t('about.cta.status')}
             </p>
             <p className="mt-4 font-display text-[28px] leading-[34px] font-bold tracking-[-0.015em] text-ink">

@@ -1,3 +1,4 @@
+import type { ComponentType } from 'react'
 import type { Locale } from '../../i18n'
 
 const className = 'block h-full w-full'
@@ -29,6 +30,33 @@ function UsaFlag() {
   )
 }
 
+function SpainFlag() {
+  return (
+    <svg viewBox="0 0 20 14" preserveAspectRatio="xMidYMid slice" aria-hidden className={className}>
+      <rect width="20" height="14" fill="#AA151B" />
+      <rect y="3.5" width="20" height="7" fill="#F1BF00" />
+    </svg>
+  )
+}
+
+function GermanyFlag() {
+  return (
+    <svg viewBox="0 0 20 14" preserveAspectRatio="xMidYMid slice" aria-hidden className={className}>
+      <rect width="20" height="14" fill="#FFCE00" />
+      <rect width="20" height="4.67" fill="#000000" />
+      <rect y="4.67" width="20" height="4.67" fill="#DD0000" />
+    </svg>
+  )
+}
+
+const flags: Record<Locale, ComponentType> = {
+  pt: BrazilFlag,
+  en: UsaFlag,
+  es: SpainFlag,
+  de: GermanyFlag,
+}
+
 export function Flag({ locale }: { locale: Locale }) {
-  return locale === 'pt' ? <BrazilFlag /> : <UsaFlag />
+  const FlagIcon = flags[locale]
+  return <FlagIcon />
 }

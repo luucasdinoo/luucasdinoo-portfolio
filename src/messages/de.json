@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "title": "Lucas Bernadino — Portfolio",
+    "description": "Portfolio von Lucas Bernadino, Backend-Entwickler."
+  },
+  "nav": {
+    "downloadCv": "Lebenslauf herunterladen"
+  },
+  "theme": {
+    "switchToLight": "Zum hellen Design wechseln",
+    "switchToDark": "Zum dunklen Design wechseln"
+  },
+  "locale": {
+    "switchLabel": "Sprache wechseln"
+  },
+  "hero": {
+    "eyebrow": "Hallo, ich bin Lucas Bernadino",
+    "title": "<accent>Backend</accent>-Entwickler",
+    "lead": "Ich entwickle skalierbare, sichere und gut dokumentierte APIs und Systeme.",
+    "avatarAlt": "Foto von Lucas Bernadino",
+    "scrollHint": "Zum Abschnitt „Über mich“ scrollen"
+  },
+  "quicknav": {
+    "label": "Schnellnavigation",
+    "about": "Über mich",
+    "experience": "Erfahrung",
+    "projects": "Projekte",
+    "skills": "Fähigkeiten",
+    "contact": "Kontakt"
+  },
+  "social": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "E-Mail"
+  },
+  "about": {
+    "eyebrow": "01 — Über mich",
+    "title": "Über mich",
+    "role": "Backend-Entwickler",
+    "bio": "Ich bin Backend-Entwickler mit Schwerpunkt auf Java und Spring Boot. Bei Capgemini entwickle und pflege ich REST-APIs für den Versicherungssektor, integriere Legacy-Mainframe-Systeme (IBM ACE, CICS) und modernisiere Anwendungen von Java 7/8 auf Java 21. Ich arbeite von der Anforderungsklärung bis zur Produktion, mit automatisierten Tests und Microservices.",
+    "location": {
+      "eyebrow": "Flexibel bei Zeitzonen",
+      "title": "Ansässig in {{city}}, <muted>remote verfügbar</muted>"
+    },
+    "education": {
+      "eyebrow": "Ausbildung",
+      "degrees": {
+        "computerScience": "Bachelor in Informatik",
+        "internetSystems": "Technologe für Internetsysteme"
+      },
+      "status": {
+        "inProgress": "Läuft noch",
+        "completed": "Abgeschlossen"
+      }
+    },
+    "cta": {
+      "status": "Verfügbar für Projekte",
+      "line1": "Hast du ein Projekt im Kopf?",
+      "line2": "Lass es uns bauen",
+      "line3": "gemeinsam.",
+      "button": "Lebenslauf herunterladen"
+    },
+    "quote": {
+      "text": "Erst zum Laufen bringen, dann richtig machen, dann schnell machen.",
+      "author": "Kent Beck"
+    },
+    "stats": {
+      "label": "Zahlen",
+      "projects": "Projekte",
+      "years": "Jahre Erfahrung",
+      "apis": "APIs in Produktion",
+      "skills": "Technologien"
+    },
+    "clock": {
+      "label": "Uhr zeigt {{time}} Uhr in {{city}}",
+      "moon": "Mond"
+    }
+  },
+  "experience": {
+    "eyebrow": "02 — Erfahrung",
+    "title": "Erfahrung",
+    "present": "Heute",
+    "duration": {
+      "year_one": "{{count}} Jahr",
+      "year_other": "{{count}} Jahre",
+      "month_one": "{{count}} Monat",
+      "month_other": "{{count}} Monate"
+    },
+    "jobs": {
+      "capgemini": {
+        "role": "Solutions Consultant II",
+        "location": "Hybrid, Recife – PE",
+        "description": "Backend-Berater für Bradesco Seguros, Brasiliens führenden Versicherer, Modernisierung von Legacy-Mainframe-Systemen und Betrieb von REST-APIs in Produktion.",
+        "bullets": [
+          "Arbeitete für den Kunden Bradesco Seguros mit Java, Spring Boot und IBM ACE, einschließlich Integrationen mit CICS und Legacy-Mainframe-Systemen.",
+          "Begleitete Projekte end-to-end, von der Anforderungsklärung bis zur Produktionsauslieferung, mit Kontrolle von Umfang, Terminen und Risiken.",
+          "Entwickelte neue Funktionen und pflegte REST-APIs, mit technischen Lösungen im Einklang mit den Geschäftszielen des Kunden.",
+          "Modernisierte Legacy-Systeme durch Migration von Java 7/8 (WebSphere) auf Java 21 mit Spring Boot.",
+          "Implementierte Mainframe-Integrationen über IBM ACE, CICS-Programmaufrufe und SOAP-Services zur Sicherstellung der Interoperabilität zwischen Legacy- und modernen Systemen.",
+          "Untersuchte und behob Vorfälle und Fehler in den Umgebungen DSV, HML und PRD und verbesserte damit Stabilität und Resilienz der Services.",
+          "Schrieb automatisierte Tests mit JUnit und Mockito sowie Endpoint-Validierungen mit Postman, wodurch Testabdeckung und Zuverlässigkeit stiegen.",
+          "Dokumentierte APIs mit SpringDoc/OpenAPI und pflegte Confluence-Seiten zur Standardisierung und Weitergabe von Wissen."
+        ]
+      },
+      "avanade": {
+        "role": "Junior Backend-Entwickler",
+        "location": "Hybrid, Recife – PE",
+        "description": "Junior-Entwickler für Wartung und Weiterentwicklung von Backend- und Frontend-Anwendungen für Unternehmenskunden.",
+        "bullets": [
+          "Wartete und unterstützte Backend-Code und sicherte so Stabilität und Weiterentwicklung der Anwendungen.",
+          "Wartete und unterstützte Frontend-Code und trug zu Fehlerbehebungen und Funktionsverbesserungen bei.",
+          "Behob Fehler in Backend- und Frontend-Anwendungen und sicherte Qualität und Zuverlässigkeit.",
+          "Implementierte neue Funktionen sowohl im Backend als auch im Frontend gemäß den definierten Anforderungen.",
+          "Nutzte Java und Spring Boot im Backend sowie TypeScript mit Angular im Frontend."
+        ]
+      },
+      "compassuol": {
+        "role": "Praktikant",
+        "location": "Remote",
+        "description": "Backend-fokussiertes Praktikum mit Anwendung von Java, Spring Boot und Cloud-Grundlagen in einem kollaborativen, verteilten Team.",
+        "bullets": [
+          "Erlernte und wendete Java und Spring Boot in der Backend-Entwicklung an.",
+          "Erhielt eine praktische Einführung in Microservices-Architektur, Service-Kommunikation und Best Practices.",
+          "Arbeitete mit AWS-Services und lernte Cloud-Computing-Konzepte und verteilte Umgebungen kennen.",
+          "Arbeitete in einem kollaborativen Team und stärkte Kommunikation und Organisation."
+        ]
+      }
+    }
+  }
+}

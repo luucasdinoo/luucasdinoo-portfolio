@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import avatar from '../assets/avatar.webp'
 import { AboutSection } from '../components/about/AboutSection'
+import { ExperienceSection } from '../components/experience/ExperienceSection'
 import { AvatarOrb } from '../components/home/AvatarOrb'
 import { HeroIntro } from '../components/home/HeroIntro'
 import { QuickNav } from '../components/home/QuickNav'
@@ -58,9 +59,10 @@ export function Home() {
         </section>
 
         <AboutSection />
+        <ExperienceSection />
 
         {quickNavSections
-          .filter(({ id }) => id !== 'sobre')
+          .filter(({ id }) => id !== 'sobre' && id !== 'experiencia')
           .map(({ id }) => (
             <section key={id} id={id} />
           ))}

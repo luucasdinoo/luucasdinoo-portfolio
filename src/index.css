@@ -93,7 +93,7 @@ html {
   background: radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--accent) 16%, transparent) 0%, transparent 60%);
 }
 
-@keyframes about-status-pulse {
+@keyframes status-pulse {
   0% {
     box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent);
   }
@@ -102,8 +102,8 @@ html {
   }
 }
 
-.about-status-dot {
-  animation: about-status-pulse 1.8s ease-out infinite;
+.status-pulse-dot {
+  animation: status-pulse 1.8s ease-out infinite;
 }
 
 @keyframes scroll-cue-pulse {
