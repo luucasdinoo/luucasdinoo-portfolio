@@ -28,6 +28,10 @@
     "skills": "Fähigkeiten",
     "contact": "Kontakt"
   },
+  "sidebar": {
+    "label": "Abschnittsnavigation",
+    "top": "Zurück nach oben"
+  },
   "social": {
     "github": "GitHub",
     "linkedin": "LinkedIn",
@@ -123,6 +127,67 @@
           "Erhielt eine praktische Einführung in Microservices-Architektur, Service-Kommunikation und Best Practices.",
           "Arbeitete mit AWS-Services und lernte Cloud-Computing-Konzepte und verteilte Umgebungen kennen.",
           "Arbeitete in einem kollaborativen Team und stärkte Kommunikation und Organisation."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "03 — Projekte",
+    "title": "Ausgewählte Projekte",
+    "status": {
+      "live": "Online",
+      "building": "In Arbeit"
+    },
+    "viewDetails": "Details ansehen",
+    "moreTech": "+{{count}}",
+    "modal": {
+      "close": "Schließen",
+      "overview": "// Überblick",
+      "builtWith": "// Gebaut mit",
+      "year": "Jahr",
+      "stack": "Stack",
+      "shots": "Screenshots",
+      "visitSite": "Website ansehen",
+      "viewCode": "Code ansehen",
+      "prev": "Vorheriger Screenshot",
+      "next": "Nächster Screenshot",
+      "goTo": "Screenshot {{n}} anzeigen",
+      "placeholder": "Screenshot folgt"
+    },
+    "items": {
+      "payflow": {
+        "summary": "Zahlungs-API für Pix- und Kartenzahlungen, mit automatischem Abgleich und idempotenten Webhooks.",
+        "overview": [
+          "Ich habe eine Zahlungs-API gebaut, damit Händler Pix- und Kartenzahlungen annehmen können, ohne jeden Acquirer einzeln anzubinden. Jede Zahlung durchläuft eine Zustandsmaschine, der Abgleich läuft am Tagesende automatisch.",
+          "Webhooks sind idempotent und werden per Kafka mit exponentiellem Backoff erneut gesendet, sodass kein Ereignis verloren geht, wenn ein Client ausfällt."
+        ],
+        "shots": [
+          "OpenAPI-Dokumentation der Zahlungs-Endpunkte",
+          "Zustandsablauf einer Zahlung",
+          "Dashboard für den täglichen Abgleich"
+        ]
+      },
+      "catalog": {
+        "summary": "Microservice für einen Videokatalog in Clean Architecture, mit asynchronem Upload und Encoding-Events.",
+        "overview": [
+          "Ein Microservice, der den Katalog einer Videoplattform verwaltet: Kategorien, Genres, Besetzung und Videos.",
+          "Die Domäne bleibt frei von Frameworks. Uploads laufen über RabbitMQ zum Encoder, Integrationstests nutzen ein echtes MySQL mit Testcontainers."
+        ],
+        "shots": [
+          "Schichten der Clean Architecture",
+          "Encoding-Queue in RabbitMQ",
+          "Bericht zur Testabdeckung"
+        ]
+      },
+      "notify": {
+        "summary": "Zentraler Benachrichtigungsdienst für E-Mail, SMS und Push, mit versionierten Vorlagen und Sendelimit pro Kunde.",
+        "overview": [
+          "Ein Dienst, der alle Benachrichtigungen des Unternehmens an einem Ort bündelt, mit versionierten Vorlagen und Einstellungen pro Nutzer.",
+          "Ein Rate Limit in Redis schützt die Anbieter, und Nachrichten laufen über SQS-Queues, um Lastspitzen abzufangen."
+        ],
+        "shots": [
+          "Architektur des Dienstes",
+          "Vorlagen-Editor"
         ]
       }
     }

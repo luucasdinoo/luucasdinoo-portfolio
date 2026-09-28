@@ -28,6 +28,10 @@
     "skills": "Habilidades",
     "contact": "Contato"
   },
+  "sidebar": {
+    "label": "Navegação por seções",
+    "top": "Voltar ao início"
+  },
   "social": {
     "github": "GitHub",
     "linkedin": "LinkedIn",
@@ -123,6 +127,67 @@
           "Introdução e prática em arquitetura de microsserviços, entendendo comunicação entre serviços e boas práticas.",
           "Contato com serviços AWS, compreendendo conceitos de computação em nuvem e ambientes distribuídos.",
           "Atuação em ambiente colaborativo, fortalecendo comunicação, trabalho em equipe e organização."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "03 — Projetos",
+    "title": "Projetos selecionados",
+    "status": {
+      "live": "No ar",
+      "building": "Em construção"
+    },
+    "viewDetails": "Ver detalhes",
+    "moreTech": "+{{count}}",
+    "modal": {
+      "close": "Fechar",
+      "overview": "// Visão geral",
+      "builtWith": "// Construído com",
+      "year": "Ano",
+      "stack": "Stack",
+      "shots": "Capturas",
+      "visitSite": "Ver site",
+      "viewCode": "Ver código",
+      "prev": "Captura anterior",
+      "next": "Próxima captura",
+      "goTo": "Ver captura {{n}}",
+      "placeholder": "Captura em breve"
+    },
+    "items": {
+      "payflow": {
+        "summary": "API de pagamentos que processa cobranças via Pix e cartão, com conciliação automática e webhooks idempotentes.",
+        "overview": [
+          "Construí uma API de pagamentos para lojistas receberem via Pix e cartão sem integrar cada adquirente. Cada cobrança passa por uma máquina de estados e a conciliação roda sozinha ao fim do dia.",
+          "Os webhooks são idempotentes e reenviados com backoff exponencial via Kafka, então nenhum evento se perde quando o cliente cai."
+        ],
+        "shots": [
+          "Documentação OpenAPI dos endpoints de cobrança",
+          "Fluxo de estados de uma cobrança",
+          "Painel de conciliação diária"
+        ]
+      },
+      "catalog": {
+        "summary": "Microsserviço de catálogo de vídeos em Clean Architecture, com upload assíncrono e eventos de encoding.",
+        "overview": [
+          "Microsserviço que administra o catálogo de uma plataforma de vídeos: categorias, gêneros, membros do elenco e vídeos.",
+          "O domínio fica isolado dos frameworks. Uploads seguem por RabbitMQ para o encoder, e os testes de integração sobem MySQL real com Testcontainers."
+        ],
+        "shots": [
+          "Camadas da Clean Architecture",
+          "Fila de encoding no RabbitMQ",
+          "Relatório de cobertura de testes"
+        ]
+      },
+      "notify": {
+        "summary": "Serviço central de notificações por e-mail, SMS e push, com templates versionados e limite de envio por cliente.",
+        "overview": [
+          "Serviço que centraliza o envio de notificações da empresa em um só lugar, com templates versionados e preferências por usuário.",
+          "Um rate limit em Redis protege os provedores, e as mensagens passam por filas SQS para absorver picos."
+        ],
+        "shots": [
+          "Arquitetura do serviço",
+          "Editor de templates"
         ]
       }
     }

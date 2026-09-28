@@ -29,7 +29,7 @@ export function ExperienceSection() {
   const headerY = useTransform(scrollYProgress, [0, 1], [48, 0])
 
   return (
-    <section id="experiencia" aria-labelledby="experience-title" className="scroll-mt-28 px-4 py-16 sm:px-8 lg:py-24">
+    <section id="experiencia" aria-labelledby="experience-title" className="scroll-mt-28 px-4 py-16 sm:px-8 lg:px-28 lg:py-24">
       <div className="mx-auto max-w-[1200px]">
         <motion.header
           ref={headerRef}

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Navigate, Outlet, useParams } from 'react-router'
 import { AppBackground } from '../components/background/AppBackground'
+import { CustomCursor } from '../components/layout/CustomCursor'
 import { Navbar } from '../components/layout/Navbar'
 import { defaultLocale, isLocale, type Locale } from '../i18n'
 
@@ -31,6 +32,7 @@ export function LocaleLayout() {
       <div className="relative z-10">
         <Outlet />
       </div>
+      <CustomCursor />
     </>
   )
 }

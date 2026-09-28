@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react'
-import { motion, MotionConfig, useReducedMotion, useScroll, useTransform } from 'motion/react'
+import { AnimatePresence, motion, MotionConfig, useReducedMotion, useScroll, useTransform } from 'motion/react'
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import avatar from '../assets/avatar.webp'
@@ -9,12 +9,16 @@ import { AvatarOrb } from '../components/home/AvatarOrb'
 import { HeroIntro } from '../components/home/HeroIntro'
 import { QuickNav } from '../components/home/QuickNav'
 import { SocialRail } from '../components/home/SocialRail'
+import { SectionSidebar } from '../components/layout/SectionSidebar'
+import { ProjectsSection } from '../components/projects/ProjectsSection'
 import { quickNavSections } from '../config/site'
+import { useActiveSection } from '../hooks/useActiveSection'
 
 export function Home() {
   const { t, i18n } = useTranslation()
   const reducedMotion = useReducedMotion()
   const heroRef = useRef<HTMLElement>(null)
+  const activeSection = useActiveSection()
 
   // 0 while the hero fills the screen → 1 once it has scrolled fully out of view.
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
@@ -26,6 +30,22 @@ export function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
+      <SectionSidebar active={activeSection} />
+
+      {/* Once the hero hands over, contacts stay pinned where the hero's rail sat. */}
+      <AnimatePresence>
+        {activeSection && (
+          <motion.div
+            initial={{ opacity: 0, x: -16 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -16 }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
+            className="mockup fixed top-1/2 left-72 z-30 hidden -translate-y-1/2 lg:block"
+          >
+            <SocialRail layout="rail" />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <main>
         <section
           ref={heroRef}
@@ -60,9 +80,10 @@ export function Home() {
 
         <AboutSection />
         <ExperienceSection />
+        <ProjectsSection />
 
         {quickNavSections
-          .filter(({ id }) => id !== 'sobre' && id !== 'experiencia')
+          .filter(({ id }) => id !== 'sobre' && id !== 'experiencia' && id !== 'projetos')
           .map(({ id }) => (
             <section key={id} id={id} />
           ))}

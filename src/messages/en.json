@@ -28,6 +28,10 @@
     "skills": "Skills",
     "contact": "Contact"
   },
+  "sidebar": {
+    "label": "Section navigation",
+    "top": "Back to top"
+  },
   "social": {
     "github": "GitHub",
     "linkedin": "LinkedIn",
@@ -123,6 +127,67 @@
           "Got a hands-on introduction to microservices architecture, service communication and best practices.",
           "Worked with AWS services, learning cloud computing concepts and distributed environments.",
           "Collaborated in a team environment, strengthening communication and organization skills."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "eyebrow": "03 — Projects",
+    "title": "Selected projects",
+    "status": {
+      "live": "Live",
+      "building": "In progress"
+    },
+    "viewDetails": "View details",
+    "moreTech": "+{{count}}",
+    "modal": {
+      "close": "Close",
+      "overview": "// Overview",
+      "builtWith": "// Built with",
+      "year": "Year",
+      "stack": "Stack",
+      "shots": "Shots",
+      "visitSite": "Visit site",
+      "viewCode": "View code",
+      "prev": "Previous shot",
+      "next": "Next shot",
+      "goTo": "Show shot {{n}}",
+      "placeholder": "Screenshot coming soon"
+    },
+    "items": {
+      "payflow": {
+        "summary": "Payments API that processes Pix and card charges, with automatic reconciliation and idempotent webhooks.",
+        "overview": [
+          "I built a payments API so merchants can take Pix and card payments without integrating each acquirer. Every charge runs through a state machine, and reconciliation runs on its own at the end of the day.",
+          "Webhooks are idempotent and retried with exponential backoff through Kafka, so no event is lost when a client goes down."
+        ],
+        "shots": [
+          "OpenAPI docs for the charge endpoints",
+          "State flow of a charge",
+          "Daily reconciliation dashboard"
+        ]
+      },
+      "catalog": {
+        "summary": "Video catalog microservice in Clean Architecture, with asynchronous uploads and encoding events.",
+        "overview": [
+          "A microservice that manages a video platform's catalog: categories, genres, cast members and videos.",
+          "The domain stays free of frameworks. Uploads go through RabbitMQ to the encoder, and integration tests run against a real MySQL with Testcontainers."
+        ],
+        "shots": [
+          "Clean Architecture layers",
+          "Encoding queue in RabbitMQ",
+          "Test coverage report"
+        ]
+      },
+      "notify": {
+        "summary": "Central notification service for email, SMS and push, with versioned templates and per-client send limits.",
+        "overview": [
+          "A service that brings all of the company's notifications into one place, with versioned templates and per-user preferences.",
+          "A Redis rate limit protects the providers, and messages flow through SQS queues to absorb spikes."
+        ],
+        "shots": [
+          "Service architecture",
+          "Template editor"
         ]
       }
     }
