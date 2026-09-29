@@ -256,5 +256,37 @@
       "python": "Scripts y APIs con Django REST Framework."
     },
     "sound": "Sonido de las teclas"
+  },
+  "contact": {
+    "eyebrow": "06 — Contacto",
+    "title": "Contacto",
+    "lead": "¿Tienes una vacante, un proyecto o una duda? Envíame un mensaje por la terminal.",
+    "path": "contacto",
+    "status": {
+      "idle": "Listo",
+      "sending": "Enviando",
+      "sent": "Enviado",
+      "opened": "Abierto",
+      "error": "Falló"
+    },
+    "from": "de:",
+    "emailPlaceholder": "tu@email.com",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "escribe un mensaje, enter para enviar...",
+    "send": "Enviar",
+    "subject": "Contacto desde el portafolio",
+    "errors": {
+      "email": "ingresa un correo válido para que pueda responder.",
+      "message": "escribe un mensaje antes de enviar."
+    },
+    "feedback": {
+      "sent": "mensaje enviado. gracias, respondo pronto.",
+      "opened": "tu app de correo se abrió con el mensaje listo. solo envíalo desde allí.",
+      "error": "no pude enviarlo ahora. inténtalo de nuevo o escribe directo a"
+    },
+    "note": {
+      "endpoint": "el mensaje llega directo a mi correo.",
+      "mailto": "enviar abre tu app de correo con el mensaje ya escrito."
+    }
   }
 }

@@ -256,5 +256,37 @@
       "python": "Scripts and APIs with Django REST Framework."
     },
     "sound": "Key sounds"
+  },
+  "contact": {
+    "eyebrow": "06 — Contact",
+    "title": "Contact",
+    "lead": "Have a role, a project or a question? Send me a message through the terminal.",
+    "path": "contact",
+    "status": {
+      "idle": "Ready",
+      "sending": "Sending",
+      "sent": "Sent",
+      "opened": "Opened",
+      "error": "Failed"
+    },
+    "from": "from:",
+    "emailPlaceholder": "your@email.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "type a message, hit enter to send...",
+    "send": "Send",
+    "subject": "Contact from the portfolio",
+    "errors": {
+      "email": "enter a valid email so I can reply.",
+      "message": "write a message before sending."
+    },
+    "feedback": {
+      "sent": "message sent. thanks, I'll reply soon.",
+      "opened": "your mail app opened with the message ready. just send it from there.",
+      "error": "couldn't send it right now. try again or write directly to"
+    },
+    "note": {
+      "endpoint": "the message goes straight to my inbox.",
+      "mailto": "send opens your mail app with the message filled in."
+    }
   }
 }

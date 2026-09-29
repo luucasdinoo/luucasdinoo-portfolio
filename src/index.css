@@ -354,6 +354,22 @@ html {
   --cap-ink: var(--surface-deep);
 }
 
+/* Contact terminal: a faint neon halo; fields keep the caret in the accent. */
+.terminal {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--accent) 12%, transparent),
+    0 0 48px color-mix(in srgb, var(--accent) 16%, transparent);
+}
+
+.terminal-field {
+  caret-color: var(--accent);
+  border-radius: var(--raw-radius-sm);
+}
+
+.terminal-field:focus-visible {
+  outline-offset: 4px;
+}
+
 /* Custom cursor (mouse only): the neon ring replaces the native pointer. */
 .custom-cursor,
 .custom-cursor * {
