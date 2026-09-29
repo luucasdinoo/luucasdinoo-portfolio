@@ -22,6 +22,7 @@ export const quickNavSections = [
   { id: 'sobre', labelKey: 'quicknav.about', icon: 'Users' },
   { id: 'experiencia', labelKey: 'quicknav.experience', icon: 'Clock' },
   { id: 'projetos', labelKey: 'quicknav.projects', icon: 'Code' },
+  { id: 'certificacoes', labelKey: 'quicknav.certifications', icon: 'Award' },
   { id: 'skills', labelKey: 'quicknav.skills', icon: 'Wrench' },
   { id: 'contato', labelKey: 'quicknav.contact', icon: 'Send' },
 ] as const

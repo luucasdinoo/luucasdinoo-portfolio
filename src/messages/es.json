@@ -25,6 +25,7 @@
     "about": "Sobre mí",
     "experience": "Experiencia",
     "projects": "Proyectos",
+    "certifications": "Certificaciones",
     "skills": "Habilidades",
     "contact": "Contacto"
   },
@@ -191,5 +192,69 @@
         ]
       }
     }
+  },
+  "certifications": {
+    "eyebrow": "04 — Certificaciones",
+    "title": "Certificaciones",
+    "label": "Carrusel de certificaciones",
+    "roledescription": "carrusel",
+    "slide": "{{n}} de {{total}}",
+    "prev": "Certificación anterior",
+    "next": "Siguiente certificación",
+    "goTo": "Ver certificación {{n}}",
+    "issued": "Emitida en {{date}}",
+    "expires": "Válida hasta {{date}}",
+    "noExpiry": "Sin vencimiento",
+    "credentialId": "ID de la credencial",
+    "viewCredential": "Ver credencial",
+    "placeholder": "Insignia próximamente",
+    "items": {
+      "awsSaa": "Diseño de arquitecturas resilientes, seguras y eficientes en costos en AWS, siguiendo el Well-Architected Framework.",
+      "az204": "Desarrollo de soluciones en Azure: App Service, Functions, Cosmos DB, colas y autenticación con Entra ID.",
+      "awsCcp": "Fundamentos de la nube AWS: servicios principales, seguridad, responsabilidad compartida y modelo de costos.",
+      "az900": "Conceptos de nube, servicios principales de Azure, identidad, gobernanza y gestión de costos.",
+      "ckad": "Examen práctico de Kubernetes: despliegue, configuración, observabilidad y redes de aplicaciones en clústeres.",
+      "ocp17": "Dominio de Java SE 17: orientación a objetos, streams, concurrencia, módulos y APIs de la plataforma."
+    },
+    "pause": "Pausar rotación automática",
+    "play": "Reanudar rotación automática"
+  },
+  "skills": {
+    "eyebrow": "05 — Habilidades",
+    "title": "Habilidades",
+    "hint": "Pista: presiona una tecla",
+    "boardLabel": "Teclado de habilidades",
+    "hotkey": "Tecla",
+    "categoriesLabel": "Categorías",
+    "categories": {
+      "backend": "Back-end",
+      "data": "Datos",
+      "devops": "Cloud y DevOps",
+      "quality": "Calidad",
+      "frontend": "Front-end"
+    },
+    "items": {
+      "java": "Mi lenguaje principal: de sistemas legados en Java 7/8 a servicios nuevos en Java 21.",
+      "springBoot": "La base de las APIs REST que construyo y mantengo en producción, con pruebas y documentación.",
+      "springCloud": "Microservicios con configuración centralizada, descubrimiento de servicios y gateway.",
+      "hibernate": "Mapeo objeto-relacional con Spring Data JPA, consultas y control de transacciones.",
+      "junit": "Pruebas unitarias y de integración que mantienen confiables las entregas.",
+      "sqlServer": "Base de datos relacional de los sistemas de seguros que mantengo.",
+      "mysql": "Base de datos relacional de mis proyectos de estudio y APIs personales.",
+      "mongodb": "Base de datos de documentos para datos flexibles, usada con Spring Data MongoDB.",
+      "openapi": "Contratos y documentación de APIs con SpringDoc y OpenAPI.",
+      "postman": "Validación de endpoints y colecciones de pruebas manuales de APIs.",
+      "docker": "Contenedores para entornos locales y despliegues consistentes.",
+      "aws": "Fundamentos de la nube y servicios de AWS aplicados a microservicios.",
+      "git": "Control de versiones diario, con ramas y revisión de código.",
+      "bitbucket": "Repositorios y pull requests en el día a día con el cliente.",
+      "bamboo": "Pipelines de build y despliegue continuo.",
+      "sonarqube": "Análisis estático para mantener la calidad y la cobertura del código.",
+      "typescript": "Tipado en el front-end y en APIs Node.",
+      "angular": "Mantenimiento y nuevas funciones en aplicaciones corporativas.",
+      "nodejs": "APIs con Express en proyectos de estudio.",
+      "python": "Scripts y APIs con Django REST Framework."
+    },
+    "sound": "Sonido de las teclas"
   }
 }

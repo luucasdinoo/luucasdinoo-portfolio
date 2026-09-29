@@ -1,10 +1,10 @@
-import { ArrowUp, Clock, Code, Send, Users, Wrench } from 'lucide-react'
+import { ArrowUp, Award, Clock, Code, Send, Users, Wrench } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { quickNavSections } from '../../config/site'
 import type { SectionId } from '../../hooks/useActiveSection'
 
-const icons = { Users, Clock, Code, Wrench, Send }
+const icons = { Users, Clock, Code, Award, Wrench, Send }
 
 const itemClass =
   'flex h-10 w-10 items-center justify-center rounded-md transition-colors duration-150 ease-out'

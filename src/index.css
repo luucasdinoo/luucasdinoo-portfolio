@@ -186,6 +186,174 @@ html {
   }
 }
 
+@keyframes carousel-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Skills keyboard: a CSS-3D keypad. Sizes scale from --k (one keycap). */
+.kb-scene {
+  --k: clamp(38px, 10.5vw, 72px);
+  --gap: calc(var(--k) * 0.17);
+  --pad: calc(var(--k) * 0.36);
+  --cap-h: calc(var(--k) * 0.17);
+  --kb-top: var(--surface-raised);
+  --kb-side: color-mix(in srgb, var(--line-strong) 40%, var(--surface));
+  perspective: 1600px;
+}
+
+.kb-board {
+  position: relative;
+  transform-style: preserve-3d;
+  width: calc(var(--pad) * 2 + var(--k) * var(--cols) + var(--gap) * (var(--cols) - 1));
+  height: calc(var(--pad) * 2 + var(--k) * var(--rows) + var(--gap) * (var(--rows) - 1));
+}
+
+.kb-slab,
+.kb-plate,
+.kb-floor {
+  position: absolute;
+  inset: 0;
+  border-radius: calc(var(--k) * 0.36);
+}
+
+.kb-slab {
+  background: var(--kb-side);
+  transform: translateZ(calc(var(--layer) * -4px));
+}
+
+.kb-plate {
+  background: var(--kb-top);
+  box-shadow:
+    inset 0 0 0 1px var(--line),
+    inset 0 0 calc(var(--k) * 0.3) color-mix(in srgb, var(--surface) 55%, transparent);
+  transform: translateZ(1px);
+}
+
+.kb-floor {
+  inset: 4%;
+  background: rgba(0, 0, 0, 0.55);
+  filter: blur(28px);
+  transform: translateZ(-36px);
+}
+
+:root[data-theme='light'] .kb-floor {
+  background: rgba(9, 36, 104, 0.22);
+}
+
+.kb-key {
+  position: absolute;
+  width: var(--k);
+  height: var(--k);
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  transform-style: preserve-3d;
+}
+
+.kb-cap {
+  position: absolute;
+  inset: 0;
+  display: block;
+  transform-style: preserve-3d;
+}
+
+/* Stacked slices make the keycap's walls, tapering and lightening towards the top. */
+.kb-cap-layer {
+  position: absolute;
+  inset: calc(var(--layer) * var(--k) * 0.05);
+  border-radius: calc(var(--k) * 0.2);
+  background: color-mix(in srgb, var(--cap-side) calc(72% + var(--layer) * 28%), black);
+  transform: translateZ(calc(var(--layer) * var(--cap-h)));
+}
+
+.kb-cap-top {
+  position: absolute;
+  inset: calc(var(--k) * 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(var(--k) * 0.18);
+  background: linear-gradient(150deg, color-mix(in srgb, var(--cap-top) 78%, white) 0%, var(--cap-top) 65%);
+  color: var(--cap-ink);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, white 14%, transparent);
+  transform: translateZ(calc(var(--cap-h) + 1px));
+  transition: box-shadow 0.18s ease-out;
+}
+
+.kb-cap-top.is-selected {
+  box-shadow:
+    0 0 0 2px var(--accent),
+    0 0 calc(var(--k) * 0.45) color-mix(in srgb, var(--accent) 70%, transparent);
+}
+
+.kb-key:focus-visible .kb-cap-top {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.kb-cap-legend {
+  position: absolute;
+  top: 9%;
+  left: 11%;
+  font-family: var(--font-mono);
+  font-size: calc(var(--k) * 0.14);
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.kb-swatch {
+  background: var(--cap-top);
+  color: var(--cap-ink);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+/* Keycap colour per skill category: blues and neutrals only. */
+[data-variant='backend'] {
+  --cap-top: var(--primary);
+  --cap-side: color-mix(in srgb, var(--primary) 60%, black);
+  --cap-ink: var(--on-primary);
+}
+
+[data-variant='data'] {
+  --cap-top: var(--accent);
+  --cap-side: color-mix(in srgb, var(--accent) 60%, black);
+  --cap-ink: var(--on-primary);
+}
+
+[data-variant='devops'] {
+  --cap-top: var(--surface-deep);
+  --cap-side: color-mix(in srgb, var(--surface-deep) 65%, black);
+  --cap-ink: var(--on-deep);
+}
+
+[data-variant='quality'] {
+  --cap-top: var(--surface);
+  --cap-side: color-mix(in srgb, var(--line-strong) 55%, var(--surface));
+  --cap-ink: var(--ink);
+}
+
+/* accent-soft is navy in the dark theme, too close to devops; the pale ink keeps the five apart there. */
+[data-variant='frontend'] {
+  --cap-top: var(--accent-soft);
+  --cap-side: color-mix(in srgb, var(--accent-soft) 60%, var(--line-strong));
+  --cap-ink: var(--accent-ink);
+}
+
+:root[data-theme='dark'] [data-variant='frontend'] {
+  --cap-top: var(--ink);
+  --cap-side: color-mix(in srgb, var(--ink) 55%, black);
+  --cap-ink: var(--surface-deep);
+}
+
 /* Custom cursor (mouse only): the neon ring replaces the native pointer. */
 .custom-cursor,
 .custom-cursor * {

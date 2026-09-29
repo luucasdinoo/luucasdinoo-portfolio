@@ -1,10 +1,10 @@
-import { Clock, Code, Send, Users, Wrench } from 'lucide-react'
+import { Award, Clock, Code, Send, Users, Wrench } from 'lucide-react'
 import { motion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { quickNavSections } from '../../config/site'
 import { fadeRise } from './fadeRise'
 
-const icons = { Users, Clock, Code, Wrench, Send }
+const icons = { Users, Clock, Code, Award, Wrench, Send }
 
 export function QuickNav() {
   const { t } = useTranslation()

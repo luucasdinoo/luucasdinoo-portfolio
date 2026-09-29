@@ -25,6 +25,7 @@
     "about": "About",
     "experience": "Experience",
     "projects": "Projects",
+    "certifications": "Certifications",
     "skills": "Skills",
     "contact": "Contact"
   },
@@ -191,5 +192,69 @@
         ]
       }
     }
+  },
+  "certifications": {
+    "eyebrow": "04 — Certifications",
+    "title": "Certifications",
+    "label": "Certifications carousel",
+    "roledescription": "carousel",
+    "slide": "{{n}} of {{total}}",
+    "prev": "Previous certification",
+    "next": "Next certification",
+    "goTo": "Show certification {{n}}",
+    "issued": "Issued {{date}}",
+    "expires": "Valid until {{date}}",
+    "noExpiry": "No expiration",
+    "credentialId": "Credential ID",
+    "viewCredential": "View credential",
+    "placeholder": "Badge coming soon",
+    "items": {
+      "awsSaa": "Designing resilient, secure and cost-efficient architectures on AWS, following the Well-Architected Framework.",
+      "az204": "Building solutions on Azure: App Service, Functions, Cosmos DB, queues and Entra ID authentication.",
+      "awsCcp": "AWS cloud fundamentals: core services, security, shared responsibility and the pricing model.",
+      "az900": "Cloud concepts, core Azure services, identity, governance and cost management.",
+      "ckad": "Hands-on Kubernetes exam: deploying, configuring, observing and networking applications in clusters.",
+      "ocp17": "Java SE 17 in depth: object orientation, streams, concurrency, modules and platform APIs."
+    },
+    "pause": "Pause automatic rotation",
+    "play": "Resume automatic rotation"
+  },
+  "skills": {
+    "eyebrow": "05 — Skills",
+    "title": "Skills",
+    "hint": "Hint: press a key",
+    "boardLabel": "Skills keyboard",
+    "hotkey": "Key",
+    "categoriesLabel": "Categories",
+    "categories": {
+      "backend": "Back-end",
+      "data": "Data",
+      "devops": "Cloud & DevOps",
+      "quality": "Quality",
+      "frontend": "Front-end"
+    },
+    "items": {
+      "java": "My main language: from legacy Java 7/8 systems to new Java 21 services.",
+      "springBoot": "The base of the REST APIs I build and run in production, with tests and docs.",
+      "springCloud": "Microservices with centralized configuration, service discovery and a gateway.",
+      "hibernate": "Object-relational mapping with Spring Data JPA, queries and transaction control.",
+      "junit": "Unit and integration tests that keep every delivery reliable.",
+      "sqlServer": "Relational database behind the insurance systems I maintain.",
+      "mysql": "Relational database for my study projects and personal APIs.",
+      "mongodb": "Document database for flexible data, used with Spring Data MongoDB.",
+      "openapi": "API contracts and documentation with SpringDoc and OpenAPI.",
+      "postman": "Endpoint validation and manual API test collections.",
+      "docker": "Containers for consistent local environments and deployments.",
+      "aws": "AWS cloud fundamentals and services applied to microservices.",
+      "git": "Daily version control, with branches and code review.",
+      "bitbucket": "Repositories and pull requests in day-to-day client work.",
+      "bamboo": "Build and continuous deployment pipelines.",
+      "sonarqube": "Static analysis to keep code quality and coverage up.",
+      "typescript": "Typing on the front end and in Node APIs.",
+      "angular": "Maintenance and new features in enterprise applications.",
+      "nodejs": "APIs with Express in study projects.",
+      "python": "Scripts and APIs with Django REST Framework."
+    },
+    "sound": "Key sounds"
   }
 }

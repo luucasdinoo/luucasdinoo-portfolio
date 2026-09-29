@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import avatar from '../assets/avatar.webp'
 import { AboutSection } from '../components/about/AboutSection'
+import { CertificationsSection } from '../components/certifications/CertificationsSection'
 import { ExperienceSection } from '../components/experience/ExperienceSection'
 import { AvatarOrb } from '../components/home/AvatarOrb'
 import { HeroIntro } from '../components/home/HeroIntro'
@@ -11,6 +12,7 @@ import { QuickNav } from '../components/home/QuickNav'
 import { SocialRail } from '../components/home/SocialRail'
 import { SectionSidebar } from '../components/layout/SectionSidebar'
 import { ProjectsSection } from '../components/projects/ProjectsSection'
+import { SkillsSection } from '../components/skills/SkillsSection'
 import { quickNavSections } from '../config/site'
 import { useActiveSection } from '../hooks/useActiveSection'
 
@@ -81,9 +83,11 @@ export function Home() {
         <AboutSection />
         <ExperienceSection />
         <ProjectsSection />
+        <CertificationsSection />
+        <SkillsSection />
 
         {quickNavSections
-          .filter(({ id }) => id !== 'sobre' && id !== 'experiencia' && id !== 'projetos')
+          .filter(({ id }) => id !== 'sobre' && id !== 'experiencia' && id !== 'projetos' && id !== 'certificacoes' && id !== 'skills')
           .map(({ id }) => (
             <section key={id} id={id} />
           ))}
