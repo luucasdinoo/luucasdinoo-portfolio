@@ -1,21 +1,14 @@
 import {
   siAngular,
-  siBamboo,
-  siBitbucket,
   siDocker,
   siGit,
-  siHibernate,
   siJunit5,
+  siKubernetes,
   siMongodb,
-  siMysql,
   siNodedotjs,
   siOpenjdk,
-  siPostman,
-  siPython,
-  siSonarqubeserver,
+  siPostgresql,
   siSpring,
-  siSpringboot,
-  siSwagger,
   siTypescript,
 } from 'simple-icons'
 
@@ -34,31 +27,31 @@ export type Skill = {
 }
 
 // Rows of five, top to bottom, matching the 1–5 / Q–T / A–G / Z–B blocks of a real keyboard.
-// Description text lives in the messages files under skills.items.<key>.
+// Description text lives in the messages files under skills.items.<key>; skills.names.<key> overrides `name` where it needs translating.
 export const skills = [
   { key: 'java', name: 'Java', category: 'backend', hotkey: '1', icon: siOpenjdk.path },
-  { key: 'springBoot', name: 'Spring Boot', category: 'backend', hotkey: '2', icon: siSpringboot.path },
-  { key: 'springCloud', name: 'Spring Cloud', category: 'backend', hotkey: '3', icon: siSpring.path },
-  { key: 'hibernate', name: 'Hibernate / JPA', category: 'backend', hotkey: '4', icon: siHibernate.path },
-  { key: 'junit', name: 'JUnit 5', category: 'quality', hotkey: '5', icon: siJunit5.path },
+  { key: 'typescript', name: 'TypeScript', category: 'frontend', hotkey: '2', icon: siTypescript.path },
+  { key: 'spring', name: 'Spring', category: 'backend', hotkey: '3', icon: siSpring.path },
+  { key: 'angular', name: 'Angular', category: 'frontend', hotkey: '4', icon: siAngular.path },
+  { key: 'nodejs', name: 'Node.js', category: 'backend', hotkey: '5', icon: siNodedotjs.path },
 
-  { key: 'sqlServer', name: 'SQL Server', category: 'data', hotkey: 'q', label: 'SQL' },
-  { key: 'mysql', name: 'MySQL', category: 'data', hotkey: 'w', icon: siMysql.path },
-  { key: 'mongodb', name: 'MongoDB', category: 'data', hotkey: 'e', icon: siMongodb.path },
-  { key: 'openapi', name: 'Swagger / OpenAPI', category: 'backend', hotkey: 'r', icon: siSwagger.path },
-  { key: 'postman', name: 'Postman', category: 'quality', hotkey: 't', icon: siPostman.path },
+  { key: 'junit', name: 'JUnit 5', category: 'quality', hotkey: 'q', icon: siJunit5.path },
+  { key: 'aws', name: 'AWS', category: 'devops', hotkey: 'w', label: 'aws' },
+  { key: 'azure', name: 'Azure', category: 'devops', hotkey: 'e', label: 'Azure' },
+  { key: 'mockito', name: 'Mockito', category: 'quality', hotkey: 'r', label: 'Mock' },
+  { key: 'sql', name: 'SQL', category: 'data', hotkey: 't', label: 'SQL' },
 
   { key: 'docker', name: 'Docker', category: 'devops', hotkey: 'a', icon: siDocker.path },
-  { key: 'aws', name: 'AWS', category: 'devops', hotkey: 's', label: 'aws' },
+  { key: 'kubernetes', name: 'Kubernetes', category: 'devops', hotkey: 's', icon: siKubernetes.path },
   { key: 'git', name: 'Git', category: 'devops', hotkey: 'd', icon: siGit.path },
-  { key: 'bitbucket', name: 'Bitbucket', category: 'devops', hotkey: 'f', icon: siBitbucket.path },
-  { key: 'bamboo', name: 'Bamboo', category: 'devops', hotkey: 'g', icon: siBamboo.path },
+  { key: 'postgresql', name: 'PostgreSQL', category: 'data', hotkey: 'f', icon: siPostgresql.path },
+  { key: 'mongodb', name: 'MongoDB', category: 'data', hotkey: 'g', icon: siMongodb.path },
 
-  { key: 'sonarqube', name: 'SonarQube', category: 'quality', hotkey: 'z', icon: siSonarqubeserver.path },
-  { key: 'typescript', name: 'TypeScript', category: 'frontend', hotkey: 'x', icon: siTypescript.path },
-  { key: 'angular', name: 'Angular', category: 'frontend', hotkey: 'c', icon: siAngular.path },
-  { key: 'nodejs', name: 'Node.js', category: 'backend', hotkey: 'v', icon: siNodedotjs.path },
-  { key: 'python', name: 'Python', category: 'backend', hotkey: 'b', icon: siPython.path },
+  { key: 'cicd', name: 'CI/CD', category: 'devops', hotkey: 'z', label: 'CI/CD' },
+  { key: 'rest', name: 'REST', category: 'backend', hotkey: 'x', label: 'REST' },
+  { key: 'soap', name: 'SOAP', category: 'backend', hotkey: 'c', label: 'SOAP' },
+  { key: 'ace', name: 'IBM App Connect Enterprise', category: 'backend', hotkey: 'v', label: 'ACE' },
+  { key: 'messaging', name: 'Mensageria', category: 'backend', hotkey: 'b', label: 'MQ' },
 ] as const satisfies readonly Skill[]
 
 export type SkillKey = (typeof skills)[number]['key']

@@ -30,7 +30,7 @@ function usePageVisible(): boolean {
 const roundButton =
   'h-11 w-11 shrink-0 cursor-pointer items-center justify-center rounded-full border border-line-strong bg-surface-raised/90 text-ink transition-colors duration-150 ease-out hover:border-accent hover:text-accent'
 
-// Signed distance from the front card, wrapping around so the ring has no ends (-2 … +3 for six cards).
+// Signed distance from the front card, wrapping around so the ring has no ends (-1 … +2 for four cards).
 function ringOffset(index: number, active: number, total: number): number {
   let offset = (index - active + total) % total
   if (offset > total / 2) offset -= total
@@ -60,7 +60,10 @@ function CertificationCard({ certification, active }: { certification: Certifica
     >
       <div className="aspect-[4/3] overflow-hidden rounded-md border border-line">
         {certification.image ? (
-          <img src={certification.image} alt={certification.title} className="h-full w-full object-cover" />
+          // Badges are square, so they sit whole on the hatch instead of being cropped to the 4:3 frame.
+          <div className="project-hatch flex h-full w-full items-center justify-center p-5">
+            <img src={certification.image} alt={certification.title} className="h-full w-full object-contain" />
+          </div>
         ) : (
           <div role="img" aria-label={certification.title} className="project-hatch flex h-full w-full flex-col items-center justify-center gap-3">
             <span className="flex h-16 w-16 items-center justify-center rounded-full border border-accent/45 bg-surface-raised text-accent">

@@ -35,7 +35,7 @@ function SkillIcon({ skill, className = '' }: { skill: SkillEntry; className?: s
     )
   }
   return (
-    <span aria-hidden className="font-display leading-none font-bold tracking-[-0.02em]" style={{ fontSize: 'calc(var(--k) * 0.3)' }}>
+    <span aria-hidden className="font-display leading-none font-bold tracking-[-0.02em]" style={{ fontSize: `calc(var(--k) * ${skill.label.length > 4 ? 0.22 : 0.3})` }}>
       {skill.label}
     </span>
   )
@@ -65,7 +65,7 @@ function Keycap({ skill, index, entered, landed, pressed, hovered, selected, onP
     <button
       type="button"
       data-variant={skill.category}
-      aria-label={`${skill.name}, ${t(`skills.categories.${skill.category}`)}`}
+      aria-label={`${t(`skills.names.${skill.key}`, { defaultValue: skill.name })}, ${t(`skills.categories.${skill.category}`)}`}
       aria-pressed={selected}
       aria-keyshortcuts={skill.hotkey.toUpperCase()}
       onPointerDown={() => onPress(skill.key)}
@@ -298,7 +298,9 @@ export function SkillsSection() {
                 <span data-variant={current.category} className="kb-swatch flex h-14 w-14 shrink-0 items-center justify-center rounded-md" style={{ '--k': '56px' } as CSSProperties}>
                   <SkillIcon skill={current} className="h-7 w-7" />
                 </span>
-                <h3 className="font-display text-[28px] leading-[34px] font-bold tracking-[-0.015em] text-ink">{current.name}</h3>
+                <h3 className="font-display text-[28px] leading-[34px] font-bold tracking-[-0.015em] text-ink">
+                  {t(`skills.names.${current.key}`, { defaultValue: current.name })}
+                </h3>
               </div>
               <p className="mt-4 text-[16px] leading-[26px] text-ink-muted">{t(`skills.items.${current.key}`)}</p>
             </div>

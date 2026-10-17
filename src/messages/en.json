@@ -4,7 +4,7 @@
     "description": "Portfolio of Lucas Bernadino, back-end developer."
   },
   "nav": {
-    "downloadCv": "Download résumé"
+    "downloadCv": "Download CV"
   },
   "theme": {
     "switchToLight": "Switch to light theme",
@@ -63,7 +63,7 @@
       "line1": "Have a project in mind?",
       "line2": "Let's build it",
       "line3": "together.",
-      "button": "Download résumé"
+      "button": "Download CV"
     },
     "quote": {
       "text": "Make it work, make it right, make it fast.",
@@ -135,6 +135,11 @@
   "projects": {
     "eyebrow": "03 — Projects",
     "title": "Selected projects",
+    "wip": {
+      "badge": "Under development",
+      "title": "This section is under construction",
+      "description": "I'm putting together detailed case studies of my projects. Check back soon."
+    },
     "status": {
       "live": "Live",
       "building": "In progress"
@@ -209,12 +214,10 @@
     "viewCredential": "View credential",
     "placeholder": "Badge coming soon",
     "items": {
+      "awsDva": "Building, deploying and debugging applications on AWS: Lambda, DynamoDB, API Gateway, SQS and CI/CD pipelines.",
       "awsSaa": "Designing resilient, secure and cost-efficient architectures on AWS, following the Well-Architected Framework.",
-      "az204": "Building solutions on Azure: App Service, Functions, Cosmos DB, queues and Entra ID authentication.",
-      "awsCcp": "AWS cloud fundamentals: core services, security, shared responsibility and the pricing model.",
       "az900": "Cloud concepts, core Azure services, identity, governance and cost management.",
-      "ckad": "Hands-on Kubernetes exam: deploying, configuring, observing and networking applications in clusters.",
-      "ocp17": "Java SE 17 in depth: object orientation, streams, concurrency, modules and platform APIs."
+      "awsCcp": "AWS cloud fundamentals: core services, security, shared responsibility and the pricing model."
     },
     "pause": "Pause automatic rotation",
     "play": "Resume automatic rotation"
@@ -235,27 +238,30 @@
     },
     "items": {
       "java": "My main language: from legacy Java 7/8 systems to new Java 21 services.",
-      "springBoot": "The base of the REST APIs I build and run in production, with tests and docs.",
-      "springCloud": "Microservices with centralized configuration, service discovery and a gateway.",
-      "hibernate": "Object-relational mapping with Spring Data JPA, queries and transaction control.",
-      "junit": "Unit and integration tests that keep every delivery reliable.",
-      "sqlServer": "Relational database behind the insurance systems I maintain.",
-      "mysql": "Relational database for my study projects and personal APIs.",
-      "mongodb": "Document database for flexible data, used with Spring Data MongoDB.",
-      "openapi": "API contracts and documentation with SpringDoc and OpenAPI.",
-      "postman": "Endpoint validation and manual API test collections.",
-      "docker": "Containers for consistent local environments and deployments.",
-      "aws": "AWS cloud fundamentals and services applied to microservices.",
-      "git": "Daily version control, with branches and code review.",
-      "bitbucket": "Repositories and pull requests in day-to-day client work.",
-      "bamboo": "Build and continuous deployment pipelines.",
-      "sonarqube": "Static analysis to keep code quality and coverage up.",
       "typescript": "Typing on the front end and in Node APIs.",
+      "spring": "Spring Boot, Spring Data and Spring Cloud behind the APIs and microservices I build and run in production.",
       "angular": "Maintenance and new features in enterprise applications.",
       "nodejs": "APIs with Express in study projects.",
-      "python": "Scripts and APIs with Django REST Framework."
+      "junit": "Unit and integration tests that keep every delivery reliable.",
+      "aws": "AWS cloud fundamentals and services applied to microservices.",
+      "azure": "Microsoft cloud services to host and integrate applications.",
+      "mockito": "Mocks and stubs to isolate dependencies in unit tests.",
+      "sql": "Modeling, queries and tuning on relational databases like SQL Server and MySQL.",
+      "docker": "Containers for consistent local environments and deployments.",
+      "kubernetes": "Container orchestration: deploying, scaling and configuring applications on a cluster.",
+      "git": "Daily version control, with branches and code review.",
+      "postgresql": "Relational database for APIs and microservices, with versioned migrations.",
+      "mongodb": "Document database for flexible data, used with Spring Data MongoDB.",
+      "cicd": "Automated build, test and deployment pipelines for every delivery.",
+      "rest": "Designing and building REST APIs with contracts documented in OpenAPI.",
+      "soap": "Integration with SOAP services and WSDL contracts in enterprise systems.",
+      "ace": "Integration flows between systems with IBM App Connect Enterprise.",
+      "messaging": "Asynchronous communication between services with queues and events (RabbitMQ, Kafka, IBM MQ)."
     },
-    "sound": "Key sounds"
+    "sound": "Key sounds",
+    "names": {
+      "messaging": "Messaging"
+    }
   },
   "contact": {
     "eyebrow": "06 — Contact",

@@ -135,6 +135,11 @@
   "projects": {
     "eyebrow": "03 — Projekte",
     "title": "Ausgewählte Projekte",
+    "wip": {
+      "badge": "In Entwicklung",
+      "title": "Dieser Bereich ist im Aufbau",
+      "description": "Ich bereite ausführliche Fallstudien zu meinen Projekten vor. Schau bald wieder vorbei."
+    },
     "status": {
       "live": "Online",
       "building": "In Arbeit"
@@ -209,12 +214,10 @@
     "viewCredential": "Nachweis ansehen",
     "placeholder": "Badge folgt",
     "items": {
+      "awsDva": "Entwicklung, Deployment und Debugging von Anwendungen auf AWS: Lambda, DynamoDB, API Gateway, SQS und CI/CD-Pipelines.",
       "awsSaa": "Entwurf ausfallsicherer, sicherer und kosteneffizienter Architekturen auf AWS nach dem Well-Architected Framework.",
-      "az204": "Entwicklung von Lösungen auf Azure: App Service, Functions, Cosmos DB, Queues und Authentifizierung mit Entra ID.",
-      "awsCcp": "AWS-Cloud-Grundlagen: zentrale Dienste, Sicherheit, geteilte Verantwortung und Kostenmodell.",
       "az900": "Cloud-Konzepte, zentrale Azure-Dienste, Identität, Governance und Kostenmanagement.",
-      "ckad": "Praktische Kubernetes-Prüfung: Deployment, Konfiguration, Observability und Netzwerk von Anwendungen in Clustern.",
-      "ocp17": "Java SE 17 im Detail: Objektorientierung, Streams, Nebenläufigkeit, Module und Plattform-APIs."
+      "awsCcp": "AWS-Cloud-Grundlagen: zentrale Dienste, Sicherheit, geteilte Verantwortung und Kostenmodell."
     },
     "pause": "Automatisches Weiterblättern anhalten",
     "play": "Automatisches Weiterblättern fortsetzen"
@@ -235,27 +238,30 @@
     },
     "items": {
       "java": "Meine Hauptsprache: von Legacy-Systemen in Java 7/8 bis zu neuen Services in Java 21.",
-      "springBoot": "Die Basis der REST-APIs, die ich baue und in Produktion betreue, mit Tests und Doku.",
-      "springCloud": "Microservices mit zentraler Konfiguration, Service Discovery und Gateway.",
-      "hibernate": "Objekt-relationales Mapping mit Spring Data JPA, Abfragen und Transaktionssteuerung.",
-      "junit": "Unit- und Integrationstests, die jede Auslieferung verlässlich halten.",
-      "sqlServer": "Relationale Datenbank der Versicherungssysteme, die ich betreue.",
-      "mysql": "Relationale Datenbank meiner Lernprojekte und eigenen APIs.",
-      "mongodb": "Dokumentendatenbank für flexible Daten, genutzt mit Spring Data MongoDB.",
-      "openapi": "API-Verträge und Dokumentation mit SpringDoc und OpenAPI.",
-      "postman": "Prüfung von Endpunkten und manuelle API-Testsammlungen.",
-      "docker": "Container für einheitliche lokale Umgebungen und Deployments.",
-      "aws": "AWS-Cloud-Grundlagen und -Dienste für Microservices.",
-      "git": "Tägliche Versionskontrolle mit Branches und Code-Reviews.",
-      "bitbucket": "Repositories und Pull Requests im Kundenalltag.",
-      "bamboo": "Build- und Continuous-Deployment-Pipelines.",
-      "sonarqube": "Statische Analyse für hohe Codequalität und Testabdeckung.",
       "typescript": "Typisierung im Front-End und in Node-APIs.",
+      "spring": "Spring Boot, Spring Data und Spring Cloud als Basis der APIs und Microservices, die ich baue und in Produktion betreue.",
       "angular": "Wartung und neue Funktionen in Unternehmensanwendungen.",
       "nodejs": "APIs mit Express in Lernprojekten.",
-      "python": "Skripte und APIs mit Django REST Framework."
+      "junit": "Unit- und Integrationstests, die jede Auslieferung verlässlich halten.",
+      "aws": "AWS-Cloud-Grundlagen und -Dienste für Microservices.",
+      "azure": "Microsoft-Cloud-Dienste zum Hosten und Integrieren von Anwendungen.",
+      "mockito": "Mocks und Stubs, um Abhängigkeiten in Unit-Tests zu isolieren.",
+      "sql": "Modellierung, Abfragen und Optimierung in relationalen Datenbanken wie SQL Server und MySQL.",
+      "docker": "Container für einheitliche lokale Umgebungen und Deployments.",
+      "kubernetes": "Container-Orchestrierung: Deployment, Skalierung und Konfiguration von Anwendungen im Cluster.",
+      "git": "Tägliche Versionskontrolle mit Branches und Code-Reviews.",
+      "postgresql": "Relationale Datenbank für APIs und Microservices, mit versionierten Migrationen.",
+      "mongodb": "Dokumentendatenbank für flexible Daten, genutzt mit Spring Data MongoDB.",
+      "cicd": "Automatisierte Build-, Test- und Deployment-Pipelines für jede Auslieferung.",
+      "rest": "Entwurf und Entwicklung von REST-APIs mit in OpenAPI dokumentierten Verträgen.",
+      "soap": "Integration mit SOAP-Services und WSDL-Verträgen in Unternehmenssystemen.",
+      "ace": "Integrationsflüsse zwischen Systemen mit IBM App Connect Enterprise.",
+      "messaging": "Asynchrone Kommunikation zwischen Services mit Queues und Events (RabbitMQ, Kafka, IBM MQ)."
     },
-    "sound": "Tastengeräusche"
+    "sound": "Tastengeräusche",
+    "names": {
+      "messaging": "Messaging"
+    }
   },
   "contact": {
     "eyebrow": "06 — Kontakt",
